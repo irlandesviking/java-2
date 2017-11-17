@@ -1,0 +1,30 @@
+
+public class Lab1 {
+	public static void main(String[] args) {
+		int [] myList = new int[100];
+		//int [] myList = new int[100];
+		for (int i =0; i < myList.length; i++) {
+			myList[i] = (int) (Math.random() * 100);
+		}
+		//for(double e: myList) {
+		//	System.out.println(e);
+		//}
+		java.util.Scanner input = new java.util.Scanner(System.in);
+		System.out.print("Enter a number between 1 and 100. ");
+		double custInput = input.nextDouble();
+		
+		boolean found = false;
+		for (double i=0; i <myList.length; ++i) {
+			if (myList[i].equals(custInput)) {
+				found = true;
+			}
+		}
+		if (found) {
+			System.out.println("we found your number in the array!");
+		} else {
+			System.out.println("we did not find a match for your number :(");
+		}
+		
+	}
+		
+}
